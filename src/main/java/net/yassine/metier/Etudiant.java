@@ -1,8 +1,9 @@
-package net.yassine.metier.model;
+package net.yassine.metier;
 
 
 import java.io.Serializable;
 
+//@Entity
 public class Etudiant implements Serializable {
     //idEtudiant, nom, prenom, email et ville
     private Long idEtudiant;
@@ -58,5 +59,10 @@ public class Etudiant implements Serializable {
 
     public void setVille(String ville) {
         this.ville = ville;
+    }
+
+    @Override
+    public String toString() {
+        return idEtudiant + " " + nom + " " + prenom + " " + email + " " + ville;
     }
 }
